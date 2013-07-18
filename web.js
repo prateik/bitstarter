@@ -1,3 +1,4 @@
+
 var express = require('express');
 
 var buffer = new Buffer(100);
@@ -10,7 +11,7 @@ app.get('/', function(request, response) {
    var fs= require("fs");
    var content  = fs.readFileSync("index.html");
 
-    buffer.write(content,"utf-8");
+    buffer.write(content.toString(),"utf-8");
 
 
   response.send(buffer.toString("utf-8"));
