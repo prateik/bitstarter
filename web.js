@@ -1,7 +1,7 @@
 
 var express = require('express');
 
-var buffer = new Buffer(100);
+var buffer = new Buffer(100000);
 var sys = require("sys");
 
 
@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
     buffer.write(content.toString(),"utf-8");
 
 
-  response.send(buffer.toString("utf-8"));
+  response.send(buffer.toString());
 
 });
 
